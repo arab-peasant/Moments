@@ -1,22 +1,14 @@
-# 🎵 SoundGallery
+# 🎵 Moments 
 
-A polished Android photo gallery where every photo can have a song attached — tap a photo to open it in a full-screen viewer with music that plays automatically, just like Instagram Stories but for your personal gallery.
-
-Made a program that acts as Instagram stories.
-
+A polished Android photo gallery where every photo can have a song attached — tap a photo to open it in a full-screen viewer with music that plays automatically, just like Instagram Stories but private and personal. 
+I've created this app because I couldn't find anything like it in the playstore. 
 ---
 
 ## ✨ Features
 
 - **Photo gallery** — grid view of all device photos, synced from MediaStore
 - **Music attachment** — link any song from your device to any photo
-- **Full-screen viewer** — swipe through photos; linked song plays automatically when you switch to a photo
-- **Music player** — album art, waveform animation, seek bar, play/pause, skip prev/next
-- **Dynamic backgrounds** — viewer background color extracted from the photo via Palette API
-- **Liked photos** — heart any photo; filter by liked in the gallery
-- **Background playback** — music keeps playing when you leave the app (foreground service)
-- **Song picker** — searchable bottom sheet showing all audio on your device
-- **Captions** — optional text caption per photo
+- **Description** — You can add a discription 
 
 ---
 
@@ -87,38 +79,3 @@ On first launch the app requests:
 - `READ_MEDIA_AUDIO` (Android 13+)
 
 ---
-
-## 📱 How to use
-
-1. **Gallery** — your device photos appear in a grid. Photos with a song attached show a 🎵 badge.
-2. **Tap a photo** → full-screen viewer opens; if a song is linked, it starts playing immediately.
-3. **Swipe left/right** → next/previous photo; song changes automatically.
-4. **Tap 🎵 (top right)** → song picker bottom sheet opens; search and select any song.
-5. **Tap ✕ on the player** → unlinks the song from the current photo.
-6. **Tap ♡** → toggles like; liked photos appear in the Liked tab.
-
----
-
-## 🔧 Extending
-
-**Add Spotify / streaming music:** Replace the `SongPickerBottomSheet` MediaStore query with a Spotify SDK search. The `AudioTrack` model accepts a URI string — pass a Spotify URI and update `ViewerViewModel` to handle streaming URIs via ExoPlayer's `DefaultDataSource`.
-
-**Cloud sync:** Replace Room with a remote database (Firestore, Supabase) by swapping the `MediaRepository` data source. The ViewModels don't care where data comes from.
-
-**Captions:** Call `viewModel.saveCaption(photoId, text)` from a dialog or inline edit field in the viewer.
-
-**Sharing:** Use `FileProvider` + `ShareCompat` to share a photo. For sharing the "photo + song" combo as a video, use `MediaMuxer` to composite the image and audio into an MP4.
-
----
-
-## 🐛 Known limitations
-
-- Album art for songs without embedded art won't load (shows placeholder)
-- Very long song titles ellipsize in the player card
-- Font requires manual download (see Setup step 2)
-
----
-
-## 📄 License
-
-MIT
