@@ -1,6 +1,6 @@
 # 🎵 Moments 
 
-A polished Android photo gallery where every photo can have a song attached — tap a photo to open it in a full-screen viewer with music that plays automatically, just like Instagram Stories but private and personal. 
+- A polished Android photo gallery where every photo can have a song attached — tap a photo to open it in a full-screen viewer with music that plays automatically, just like Instagram Stories but private and personal. 
 I've created this app because I couldn't find anything like it in the playstore. 
 ---
 
