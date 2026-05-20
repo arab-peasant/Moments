@@ -49,7 +49,7 @@ app/
 ### 1. Clone & open in Android Studio
 
 ```bash
-git clone <your-repo>
+git clone https://github.com/arab-peasant/Moments.git
 ```
 
 Open in **Android Studio Hedgehog** (2023.1+) or newer.
