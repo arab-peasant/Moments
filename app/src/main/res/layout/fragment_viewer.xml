@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_viewer">
+
+    <!-- Blurred background image -->
+    <ImageView
+        android:id="@+id/iv_background_blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="Background Blur" />
+
+    <!-- Dynamic color overlay for depth -->
+    <View
+        android:id="@+id/background_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="#1A1825" />
+
+    <!-- Main scrollable content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Full screen photo container -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="750dp"
+                tools:layout_height="650dp">
+
+                <!-- Photo pager -->
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!-- Vignette overlay -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/vignette_overlay" />
+
+                <!-- Bottom gradient for photo area -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/gradient_bottom_heavy" />
+
+                <!-- Top controls (moved inside scroll to keep them over the photo) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="8dp"
+                    android:gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/btn_back"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_arrow_back"
+                        android:background="@drawable/bg_control_button"
+                        android:contentDescription="Back" />
+
+                </LinearLayout>
+
+                <!-- Caption and Player info (Overlayed on photo) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="16dp">
+
+                    <!-- Music player card -->
+                    <FrameLayout
+                        android:id="@+id/player_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_glass_card"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <!-- Track info row -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="12dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_song_title"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:ellipsize="end"
+                                        android:singleLine="true"
+                                        tools:text="Golden Hour" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:gravity="center_vertical"
+                                        android:layout_marginTop="4dp">
+
+                                        <com.soundgallery.app.ui.viewer.WaveformView
+                                            android:id="@+id/waveform_view"
+                                            android:layout_width="32dp"
+                                            android:layout_height="16dp"
+                                            android:layout_marginEnd="6dp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_song_artist"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="#80FFFFFF"
+                                            android:textSize="12sp"
+                                            tools:text="JVKE" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!-- Seek bar -->
+                            <SeekBar
+                                android:id="@+id/seek_bar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:progressTint="@color/accent_purple"
+                                android:thumbTint="@color/white"
+                                android:layout_marginBottom="4dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="10dp">
+
+                                <TextView
+                                    android:id="@+id/tv_time_elapsed"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="#60FFFFFF"
+                                    android:textSize="10sp"
+                                    tools:text="0:35" />
+
+                                <TextView
+                                    android:id="@+id/tv_time_duration"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#60FFFFFF"
+                                    android:textSize="10sp"
+                                    tools:text="3:24" />
+                            </LinearLayout>
+
+                            <!-- Playback controls -->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center">
+
+                                    <ImageButton
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:src="@drawable/ic_skip_previous"
+                                        android:background="@android:color/transparent"
+                                        android:tint="#80FFFFFF"
+                                        android:contentDescription="Previous"
+                                        android:layout_marginEnd="24dp" />
+
+                                    <ImageButton
+                                        android:id="@+id/btn_play_pause"
+                                        android:layout_width="52dp"
+                                        android:layout_height="52dp"
+                                        android:src="@drawable/ic_pause"
+                                        android:background="@drawable/bg_play_button"
+                                        android:contentDescription="Play/Pause"
+                                        android:tint="@color/bg_primary" />
+
+                                    <ImageButton
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:src="@drawable/ic_skip_next"
+                                        android:background="@android:color/transparent"
+                                        android:tint="#80FFFFFF"
+                                        android:contentDescription="Next"
+                                        android:layout_marginStart="24dp" />
+
+                                </LinearLayout>
+
+                                <ImageButton
+                                    android:id="@+id/btn_save_music"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/ic_check"
+                                    android:tint="@color/white"
+                                    android:contentDescription="Save music" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <!-- No-song card -->
+                    <FrameLayout
+                        android:id="@+id/no_song_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_glass_card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="16dp"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="No song attached"
+                                android:textColor="#80FFFFFF"
+                                android:textSize="13sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_attach_song_inline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:text="Add song"
+                                android:textSize="12sp"
+                                app:backgroundTint="@color/accent_purple"
+                                app:cornerRadius="18dp"
+                                style="@style/Widget.Material3.Button" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Description Section (Visible on scroll) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_glass_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="STORY"
+                    android:textColor="#50FFFFFF"
+                    android:textSize="12sp"
+                    android:letterSpacing="0.2"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_story_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginBottom="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+                    tools:text="October 24, 2023" />
+
+                <!-- Display Mode -->
+                <TextView
+                    android:id="@+id/tv_story_display"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="8dp"
+                    android:fontFamily="@font/dm_serif_display_italic"
+                    android:minLines="3"
+                    android:gravity="top"
+                    android:hint="Tap to write the story behind this moment..."
+                    android:textColorHint="#30FFFFFF"
+                    tools:text="This was a beautiful day at the mountains..." />
+
+                <!-- Edit Mode Container -->
+                <LinearLayout
+                    android:id="@+id/edit_mode_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <EditText
+                        android:id="@+id/et_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="Write the story behind this moment..."
+                        android:textColor="@color/white"
+                        android:textColorHint="#30FFFFFF"
+                        android:textSize="18sp"
+                        android:lineSpacingExtra="8dp"
+                        android:fontFamily="@font/dm_serif_display_italic"
+                        android:inputType="textMultiLine"
+                        android:minLines="3"
+                        android:gravity="top" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_save_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="16dp"
+                        android:text="Save Story"
+                        android:textSize="12sp"
+                        app:backgroundTint="#20FFFFFF"
+                        app:cornerRadius="12dp"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Bottom spacer -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

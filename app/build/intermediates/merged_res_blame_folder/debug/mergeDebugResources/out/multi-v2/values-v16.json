@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.soundgallery.app-mergeDebugResources-59:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Azadea\\.gradle\\caches\\transforms-4\\55814ec7969afce90e765198afff95e5\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Azadea\\.gradle\\caches\\transforms-4\\966c3babe4c58319c46d9ffaec0098af\\transformed\\core-1.12.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

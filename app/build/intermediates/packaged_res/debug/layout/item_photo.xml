@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginStart="1.5dp"
+    android:layout_marginEnd="1.5dp"
+    android:layout_marginBottom="3dp">
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="Photo" />
+
+    <!-- Dark gradient overlay at bottom -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient_bottom" />
+
+    <!-- Music badge -->
+    <LinearLayout
+        android:id="@+id/music_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:background="@drawable/bg_music_badge"
+        android:alpha="0">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ic_music_note"
+            android:layout_marginEnd="4dp" />
+
+        <TextView
+            android:id="@+id/tv_song_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:maxWidth="100dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            tools:text="Golden Hour" />
+    </LinearLayout>
+
+    <!-- Liked heart indicator -->
+    <ImageView
+        android:id="@+id/iv_liked"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_heart_filled"
+        android:tint="#FFFF4A8C"
+        android:alpha="0" />
+
+</FrameLayout>

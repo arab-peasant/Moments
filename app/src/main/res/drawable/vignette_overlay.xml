@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Vignette overlay: dark at edges, transparent in center -->
+<!-- Note: Android XML doesn't support radial gradients with multiple color stops well,
+     so we use a LayerList approach combining corner-focused radial gradients -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="200%p"
+                android:startColor="#00000000"
+                android:endColor="#55000000" />
+        </shape>
+    </item>
+</layer-list>

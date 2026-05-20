@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_viewer">
+
+    <!-- Dynamic blurred background color overlay -->
+    <View
+        android:id="@+id/background_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.45" />
+
+    <!-- Photo pager -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Vignette overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vignette_overlay" />
+
+    <!-- Top gradient -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/gradient_top" />
+
+    <!-- Bottom gradient -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient_bottom_heavy" />
+
+    <!-- Top controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="48dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@drawable/bg_control_button"
+            android:contentDescription="Back" />
+
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_like"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_heart"
+            android:background="@drawable/bg_control_button"
+            android:contentDescription="Like"
+            android:layout_marginEnd="8dp" />
+
+        <ImageButton
+            android:id="@+id/btn_attach_song"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_music_note"
+            android:background="@drawable/bg_control_button"
+            android:contentDescription="Attach song" />
+
+    </LinearLayout>
+
+    <!-- Bottom: caption + music player -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="100dp">
+
+        <!-- Caption -->
+        <TextView
+            android:id="@+id/tv_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:fontFamily="@font/dm_serif_display_italic"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            tools:text="Peaks at dawn"
+            tools:visibility="visible" />
+
+        <!-- Music player card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/player_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/player_card_bg"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Track info row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- Album art -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp"
+                        android:layout_marginEnd="12dp">
+
+                        <ImageView
+                            android:id="@+id/iv_album_art"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_music_placeholder" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_song_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            tools:text="Golden Hour" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="3dp">
+
+                            <com.soundgallery.app.ui.viewer.WaveformView
+                                android:id="@+id/waveform_view"
+                                android:layout_width="32dp"
+                                android:layout_height="16dp"
+                                android:layout_marginEnd="6dp" />
+
+                            <TextView
+                                android:id="@+id/tv_song_artist"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#80FFFFFF"
+                                android:textSize="11sp"
+                                tools:text="JVKE" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Unlink button -->
+                    <ImageButton
+                        android:id="@+id/btn_unlink_song"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_close"
+                        android:background="@android:color/transparent"
+                        android:tint="#50FFFFFF"
+                        android:contentDescription="Remove song" />
+
+                </LinearLayout>
+
+                <!-- Seek bar -->
+                <SeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/accent_purple"
+                    android:thumbTint="@color/white"
+                    android:layout_marginBottom="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_time_elapsed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#60FFFFFF"
+                        android:textSize="10sp"
+                        tools:text="0:35" />
+
+                    <TextView
+                        android:id="@+id/tv_time_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#60FFFFFF"
+                        android:textSize="10sp"
+                        tools:text="3:24" />
+                </LinearLayout>
+
+                <!-- Playback controls -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_skip_previous"
+                        android:background="@android:color/transparent"
+                        android:tint="#80FFFFFF"
+                        android:contentDescription="Previous"
+                        android:layout_marginEnd="24dp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_play_pause"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:src="@drawable/ic_pause"
+                        android:background="@drawable/bg_play_button"
+                        android:contentDescription="Play/Pause"
+                        android:tint="@color/bg_primary" />
+
+                    <ImageButton
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_skip_next"
+                        android:background="@android:color/transparent"
+                        android:tint="#80FFFFFF"
+                        android:contentDescription="Next"
+                        android:layout_marginStart="24dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- No-song card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/no_song_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/player_card_bg"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No song attached"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_attach_song_inline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="Add song"
+                    android:textSize="12sp"
+                    app:backgroundTint="@color/accent_purple"
+                    app:cornerRadius="18dp"
+                    style="@style/Widget.Material3.Button" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</FrameLayout>

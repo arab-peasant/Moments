@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    To use DM Serif Display, download the font from:
+    https://fonts.google.com/specimen/DM+Serif+Display
+
+    Place the .ttf files in app/src/main/res/font/:
+      - dm_serif_display.ttf
+      - dm_serif_display_italic.ttf
+
+    Then reference them in XML as @font/dm_serif_display_italic
+    and in code as ResourcesCompat.getFont(context, R.font.dm_serif_display_italic)
+
+    Alternatively, use downloadable fonts by replacing this file with:
+    <font-family xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:fontProviderAuthority="com.google.android.gms.fonts"
+        app:fontProviderPackage="com.google.android.gms"
+        app:fontProviderQuery="DM Serif Display"
+        app:fontProviderCerts="@array/com_google_android_gms_fonts_certs" />
+-->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Place dm_serif_display_italic_font.ttf in res/font/ -->
+    <font
+        app:fontStyle="italic"
+        app:fontWeight="400"
+        app:font="@font/dm_serif_display_italic_font" />
+</font-family>

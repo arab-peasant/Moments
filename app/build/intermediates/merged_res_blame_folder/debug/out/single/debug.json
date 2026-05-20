@@ -1,0 +1,154 @@
+[
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_heart_filled.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_heart_filled.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/layout_item_song.xml.flat",
+        "source": "com.soundgallery.app-main-63:/layout/item_song.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/layout_fragment_gallery.xml.flat",
+        "source": "com.soundgallery.app-main-63:/layout/fragment_gallery.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/layout_item_viewer_photo.xml.flat",
+        "source": "com.soundgallery.app-main-63:/layout/item_viewer_photo.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/layout_activity_main.xml.flat",
+        "source": "com.soundgallery.app-main-63:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_skip_next.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_skip_next.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/anim_fade_in.xml.flat",
+        "source": "com.soundgallery.app-main-63:/anim/fade_in.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/layout_bottom_sheet_song_picker.xml.flat",
+        "source": "com.soundgallery.app-main-63:/layout/bottom_sheet_song_picker.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_gradient_bottom.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/gradient_bottom.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_music_placeholder.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_music_placeholder.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/anim_slide_out_down.xml.flat",
+        "source": "com.soundgallery.app-main-63:/anim/slide_out_down.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.soundgallery.app-main-63:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/anim_slide_in_up.xml.flat",
+        "source": "com.soundgallery.app-main-63:/anim/slide_in_up.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.soundgallery.app-main-63:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_skip_previous.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_skip_previous.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_bg_play_button.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/bg_play_button.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_bg_sheet_handle.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/bg_sheet_handle.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_heart.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_heart.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_music_note.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_music_note.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/anim_fade_out.xml.flat",
+        "source": "com.soundgallery.app-main-63:/anim/fade_out.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_pause.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_pause.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_vignette_overlay.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/vignette_overlay.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/layout_fragment_viewer.xml.flat",
+        "source": "com.soundgallery.app-main-63:/layout/fragment_viewer.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_bg_song_item.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/bg_song_item.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.soundgallery.app-main-63:/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_grid.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_grid.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_bg_music_badge.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/bg_music_badge.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/navigation_nav_graph.xml.flat",
+        "source": "com.soundgallery.app-main-63:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_play.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_play.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_arrow_back.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_arrow_back.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_ic_close.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/ic_close.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_gradient_top.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/gradient_top.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/color_nav_selector.xml.flat",
+        "source": "com.soundgallery.app-main-63:/color/nav_selector.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/layout_item_photo.xml.flat",
+        "source": "com.soundgallery.app-main-63:/layout/item_photo.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/font_dm_serif_display_italic_font.ttf.flat",
+        "source": "com.soundgallery.app-main-63:/font/dm_serif_display_italic_font.ttf"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_gradient_bottom_heavy.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/gradient_bottom_heavy.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/font_dm_serif_display_italic.xml.flat",
+        "source": "com.soundgallery.app-main-63:/font/dm_serif_display_italic.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-merged_res-61:/drawable_bg_control_button.xml.flat",
+        "source": "com.soundgallery.app-main-63:/drawable/bg_control_button.xml"
+    }
+]

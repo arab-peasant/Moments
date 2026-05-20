@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/galleryFragment">
+
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.soundgallery.app.ui.gallery.GalleryFragment"
+        android:label="Gallery"
+        tools:layout="@layout/fragment_gallery">
+
+        <action
+            android:id="@+id/action_gallery_to_viewer"
+            app:destination="@id/viewerFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewerFragment"
+        android:name="com.soundgallery.app.ui.viewer.ViewerFragment"
+        android:label="Viewer"
+        tools:layout="@layout/fragment_viewer">
+
+        <argument
+            android:name="photoUri"
+            app:argType="string" />
+        <argument
+            android:name="startPosition"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+</navigation>

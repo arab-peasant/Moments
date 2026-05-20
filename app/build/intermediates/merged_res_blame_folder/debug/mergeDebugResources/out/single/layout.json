@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.soundgallery.app-mergeDebugResources-60:/layout/fragment_gallery.xml",
+        "source": "com.soundgallery.app-main-63:/layout/fragment_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-mergeDebugResources-60:\\layout\\bottom_sheet_song_picker.xml",
+        "source": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-main-63:\\layout\\bottom_sheet_song_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-mergeDebugResources-60:\\layout\\item_viewer_photo.xml",
+        "source": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-main-63:\\layout\\item_viewer_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-mergeDebugResources-60:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-main-63:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-mergeDebugResources-60:\\layout\\item_photo.xml",
+        "source": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-main-63:\\layout\\item_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-mergeDebugResources-60:\\layout\\item_gallery_header.xml",
+        "source": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-main-63:\\layout\\item_gallery_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-mergeDebugResources-60:\\layout\\fragment_viewer.xml",
+        "source": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-main-63:\\layout\\fragment_viewer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-mergeDebugResources-60:\\layout\\item_song.xml",
+        "source": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-main-63:\\layout\\item_song.xml"
+    },
+    {
+        "merged": "com.soundgallery.app-mergeDebugResources-60:/layout/item_photo.xml",
+        "source": "com.soundgallery.app-main-63:/layout/item_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-mergeDebugResources-60:\\layout\\fragment_gallery.xml",
+        "source": "C:\\Users\\Azadea\\.gradle\\daemon\\8.7\\com.soundgallery.app-main-63:\\layout\\fragment_gallery.xml"
+    }
+]

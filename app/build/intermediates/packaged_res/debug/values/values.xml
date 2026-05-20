@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_pink">#FF6BAC</color>
+    <color name="accent_purple">#B26FFF</color>
+    <color name="bg_primary">#0A0A0F</color>
+    <color name="bg_surface">#15131E</color>
+    <color name="bg_viewer">#0A0A0F</color>
+    <color name="nav_active">#B26FFF</color>
+    <color name="nav_inactive">#3D3A52</color>
+    <color name="player_card_bg">#CC1A1825</color>
+    <color name="text_primary">#F0EEE8</color>
+    <color name="text_secondary">#9A96B8</color>
+    <color name="text_tertiary">#5A5870</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">SoundGallery</string>
+    <string name="nav_gallery">Gallery</string>
+    <string name="nav_liked">Liked</string>
+    <string name="nav_music">Music</string>
+    <style name="TabTextAppearance" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Theme.SoundGallery" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/accent_purple</item>
+        <item name="colorOnPrimary">@color/bg_primary</item>
+        <item name="colorSurface">@color/bg_surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:statusBarColor">@color/bg_primary</item>
+        <item name="android:navigationBarColor">@color/bg_surface</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

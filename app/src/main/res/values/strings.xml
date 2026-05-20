@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Moments</string>
+    <string name="nav_gallery">Gallery</string>
+    <string name="nav_liked">Liked</string>
+    <string name="nav_music">Music</string>
+</resources>
